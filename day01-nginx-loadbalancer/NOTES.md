@@ -197,19 +197,12 @@
 
 
 | Error | Why it happened | Fix |
-
 |---|---|---|
-
 | `Is a directory` | Ran `cat` on a folder | Add the file name |
-
 | `Could not resolve host` | Typed `local host` with a space | `localhost` |
-
 | `unexpected token 'sudo'` | Two commands on one line | Use `;` or `&&` |
-
 | `'status': command not found` | Typo | `systemctl` |
-
 | `Connection refused` | Port 8083 had no server | Built Server 3 |
-
 
 
 # PART 4: THE BUG I FIXED
