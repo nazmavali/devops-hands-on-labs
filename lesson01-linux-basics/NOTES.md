@@ -30,3 +30,14 @@
 - Installed today: `tree` (draws folders) and `htop` (like Task Manager)
 - Error "Unable to locate package" = no program with that name exists
 - Use sudo only when needed. The admin can break things.
+
+
+## 1E: Web server (Nginx)
+- **What:** A program that hands webpages to people who ask for it.
+- **Why:** Without it, a website is just a file nobody else can see.
+- **When:** Whenever a company wants a website or app online.
+- **Where:** On a server. Webpages live on the "shelf": `/var/www/html`
+- Story: Firefox (customer) asks → Nginx (clerk) hands over the page.
+- `sudo apt install nginx -y` – install the web server
+- `http://localhost` – visit my own website ("this computer")
+- `echo "<h1>Hi</h1>" | sudo tee /var/www/html/index.html` – put my own page on the shelf
