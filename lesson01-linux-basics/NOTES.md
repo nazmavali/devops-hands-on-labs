@@ -41,3 +41,14 @@
 - `sudo apt install nginx -y` – install the web server
 - `http://localhost` – visit my own website ("this computer")
 - `echo "<h1>Hi</h1>" | sudo tee /var/www/html/index.html` – put my own page on the shelf
+
+## 1F: Logs
+- **What:** A diary a program writes automatically (like phone call history).
+- **Why:** To find out what happened, especially when something breaks.
+- **When:** When something goes wrong, or to check who visited.
+- **Where:** `/var/log`. Nginx visits: `/var/log/nginx/access.log`
+- `sudo tail -n 5 /var/log/nginx/access.log` – show the newest 5 lines
+- How to read a line: WHO (127.0.0.1 = me), WHEN (time), WHAT (page), RESULT
+- `404` = page not found. `304` = page unchanged, use your copy.
+- My test: visited /nazma (doesn't exist) → 404, and it showed up in the log.
+
