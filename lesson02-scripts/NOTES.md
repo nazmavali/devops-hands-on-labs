@@ -14,3 +14,14 @@
 - `chmod +x hello.sh` – give the file permission to run
 - `./hello.sh` – run the script in this folder (`./` = "right here")
 - One command ran two steps. That's automation!
+
+
+## 2C: Script that checks my website (check.sh)
+- `curl localhost` – visit a website from the terminal. Firefox is for people, curl is for scripts.
+- `if ... then ... else ... fi` – the script makes a decision (like "if it rains, take an umbrella")
+- `curl -s` – silent, no progress messages
+- `> /dev/null` – throw away the page text; I only care whether it worked
+- `sudo systemctl stop nginx` – turn the website off (clerk goes home)
+- `sudo systemctl start nginx` – turn it back on
+- Tested both: running → "UP ✅", stopped → "DOWN ❌"
+- Always test the bad case too, to prove the script really works.
