@@ -1,7 +1,7 @@
 #!/bin/bash
 if curl -s localhost > /dev/null
 then
-  echo "Website is UP ✅"
+  echo "$(date '+%Y-%m-%d %H:%M') Website is UP ✅"
 else
-  echo "Website is DOWN ❌"
+  echo "$(date '+%Y-%m-%d %H:%M') Website is DOWN ❌"
 fi
