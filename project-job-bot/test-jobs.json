@@ -1,0 +1,7 @@
+{
+  "jobs": [
+    {"title": "Junior DevOps Engineer", "company_name": "TestCorp", "url": "https://example.com/1"},
+    {"title": "Freelance Writer", "company_name": "WordCo", "url": "https://example.com/2"},
+    {"title": "Cloud Engineer", "company_name": "SkyTech", "url": "https://example.com/3"}
+  ]
+}
