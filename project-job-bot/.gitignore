@@ -1,0 +1,9 @@
+# Job data from the APIs (not ours to republish, changes every run)
+remotive.json
+jobicy.json
+jobs.json
+all.txt
+
+# My personal job-hunt history
+seen.txt
+jobs.log
