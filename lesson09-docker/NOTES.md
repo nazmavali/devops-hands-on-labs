@@ -19,3 +19,15 @@
 - Digest (sha256) = the image's fingerprint, proves it downloaded correctly
 - Docker client = the `docker` command I type (the remote)
 - Docker daemon = the Docker service in the background that does the work (the TV)
+
+## 9C: Nginx in a container
+- `sudo docker run -d -p 8080:80 --name my-nginx nginx` – run Nginx in a container
+  - `-d` = run in the background
+  - `-p 8080:80` = computer door 8080 → container door 80 (format: computer:container)
+  - `--name my-nginx` = give the container a name
+  - `nginx` = the image from Docker Hub
+- Used 8080 because Nginx on the computer already uses door 80 (two programs can't share one door)
+- `sudo docker ps` – list running containers (ID, image, status, ports, name)
+- `sudo docker stop my-nginx` / `sudo docker start my-nginx` – stop and start it
+- Tested: stopped → "Could not connect", started → "Welcome to nginx!"
+- In Firefox, type only the address (http://localhost:8080). `curl` is for the terminal.
