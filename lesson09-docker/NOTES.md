@@ -31,3 +31,13 @@
 - `sudo docker stop my-nginx` / `sudo docker start my-nginx` – stop and start it
 - Tested: stopped → "Could not connect", started → "Welcome to nginx!"
 - In Firefox, type only the address (http://localhost:8080). `curl` is for the terminal.
+
+## 9D: My own image
+- Dockerfile = the recipe for building an image
+- `FROM nginx` – start from the official Nginx image (like a cake mix)
+- `COPY index.html /usr/share/nginx/html/index.html` – put my page on Nginx's shelf inside the image
+- `sudo docker build -t nazma-website .` – build the image (`-t` = name, `.` = Dockerfile is in this folder)
+- `sudo docker images` – list images on my computer
+- `sudo docker run -d -p 8081:80 --name my-website nazma-website` – run my image
+- Flow: Dockerfile → build → image → run → container → website
+- Real world: an image is a packed app, not a server. It runs ON a server as a container.
