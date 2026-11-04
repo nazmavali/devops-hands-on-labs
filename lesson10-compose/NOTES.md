@@ -25,3 +25,14 @@
 - The loop: change files → rebuild image → recreate container → check
 - Kept my personal photo off GitHub with .gitignore
 - Container name conflict: names must be unique → `docker rm -f <name>`
+
+
+## 10C: Load balancer with 4 containers
+- Rebuilt my Day 1 setup with Compose: 1 load balancer + 3 sites, one command
+- `volumes: - ./site1:/usr/share/nginx/html` = show my folder inside the container (folder:container)
+- `depends_on:` = start these services first
+- Containers find each other BY NAME (site1, site2...) on Compose's private network (DNS!)
+- Only the load balancer has `ports:` (8090). The sites are only reachable through it.
+- Test: stopped site2 → visitors only got Server 1 and 3, website kept working
+- `sudo docker compose stop <service>` / `start <service>` – stop or start one container
+- `sudo docker compose logs <service>` – read a container's logs
