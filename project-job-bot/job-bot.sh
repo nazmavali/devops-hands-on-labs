@@ -1,7 +1,7 @@
 #!/bin/bash
 # DevOps Job-Alert Bot: Remotive + Jobicy (remote jobs, USA)
 
-cd /home/nazma/devops-hands-on-labs/project-job-bot
+cd /home/nazma/devops-hands-on-labs/project-job-bot || exit
 touch seen.txt
 
 if [ -n "$1" ]
