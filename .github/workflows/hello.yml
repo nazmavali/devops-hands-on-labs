@@ -1,0 +1,13 @@
+name: Hello DevOps
+
+on: push
+
+jobs:
+  say-hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Say hello
+        run: echo "Hello from GitHub Actions! My name is Nazma."
+
+      - name: Show the date
+        run: date
