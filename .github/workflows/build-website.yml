@@ -1,0 +1,24 @@
+name: Build and test website
+
+on: push
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get my code
+        uses: actions/checkout@v5
+
+      - name: Create a placeholder photo (my real photo is private)
+        run: touch lesson09-docker/my-website/photo.png
+
+      - name: Build the Docker image
+        run: docker build -t nazma-website lesson09-docker/my-website
+
+      - name: Start the website
+        run: docker run -d -p 8080:80 --name test-site nazma-website
+
+      - name: Test the website
+        run: |
+          sleep 3
+          curl -s localhost:8080 | grep "Nazma"
